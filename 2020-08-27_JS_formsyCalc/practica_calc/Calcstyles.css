@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formcontact {
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.campoform {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.camposform > label {
+    margin-bottom: 10px;
+}
+.alert {
+    background-color: red;
+}
