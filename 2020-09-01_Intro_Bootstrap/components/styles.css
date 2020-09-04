@@ -1,0 +1,15 @@
+.mybg {
+    background: #2c0568; 
+}
+.letra>ul>li>a{
+    color: #ffffff !important;
+   } 
+
+.card-img-top {
+    width: 70px;
+    display: flex;
+    align-self: center;
+}
+.carousel-fade .carousel-item, .carousel-item img  {
+    max-height: 70vh;
+}
