@@ -1,0 +1,14 @@
+.propia {
+    height: 100px;
+}
+.rowPropia {
+    background-color: peru;
+}
+.colPropia{
+    width: 200px !important;
+    height: 280px;
+    padding: 30px;
+}
+.punto {
+    
+}
