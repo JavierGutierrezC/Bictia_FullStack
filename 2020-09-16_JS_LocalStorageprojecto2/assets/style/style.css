@@ -68,6 +68,12 @@ body {
 .light {
 	background-color: #fff;
 }
+
+/* TEMA DARK */
+.container.dark {
+	background-color: #333333;
+}
+
 .container.dark .main {
 	background-color: #333333;
 }
@@ -86,3 +92,48 @@ body {
 /* .container.light .main {
 	background-color: white;
 } */
+
+
+
+/* TEMA PINK */
+.container.pink {
+	background-color: #d33aa0;
+}
+
+.container.pink .main {
+	background-color: #d33aa0;
+}
+.container.pink p,
+.container.pink h1,
+.container.pink a {
+	color: #f4f4f4;
+}
+.container.pink .header,
+.container.pink .footer {
+	box-shadow: 0 0 8px rgb(247, 9, 9);
+}
+.container.pink .linkMenu {
+    border-right: 1px solid white;
+}
+
+
+/* * TEMA BLUE */
+.container.blue {
+	background-color: #417ece;
+}
+
+.container.blue .main {
+	background-color:  #417ece;
+}
+.container.blue p,
+.container.blue h1,
+.container.blue a {
+	color: #f4f4f4;
+}
+.container.blue .header,
+.container.blue .footer {
+	box-shadow: 0 0 8px rgb(247, 9, 9);
+}
+.container.blue .linkMenu {
+    border-right: 1px solid white;
+}
