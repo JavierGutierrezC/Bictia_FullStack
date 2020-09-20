@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo {
+    background-image:  linear-gradient(to bottom right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url("../images/le-bon-menu-frutas-saludables.jpg");
+}
+
+.botoncolor {
+    background-color:rgb(189, 59, 189); 
+}
+
+.listmerc {
+    background-color:rgb(68, 9, 68); 
+}
