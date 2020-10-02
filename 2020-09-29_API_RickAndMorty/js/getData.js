@@ -14,7 +14,7 @@ const getData= (api) => {
     return fetch(api) // Trae la info de la api
         .then((response) => response.json())//mostrar el contenido de la API en el formato deseado en esta caso json
         .then((json)=>{
-            llenarDatos(json);
+            llenarDatos(json), paginacion(json.info);
             //console.log("json -->", json);
         })
         .catch((error) => {
@@ -24,7 +24,7 @@ const getData= (api) => {
 
 //Lenar datos en nuestra pagina
 //data es el json que viene del getData
-const llenarDatos = (data) => {
+function llenarDatos(data) {
     let html = "";
     //pj es igual a data.result. es el resutado
     //data.result es la api y el resultado que es donde esta la inforcaion de los personajes
@@ -44,6 +44,41 @@ const llenarDatos = (data) => {
     // imprimir datos en HTML
     document.getElementById("datosPersonajes").innerHTML = html;
 }
+
+
+function paginacion(data) {
+
+    let prevDisable = "";
+    let nextDisabe = "";
+
+    // if (data.prev == null){
+    //     prevDisable = "disabled";
+    // }else {
+    //     prevDisable = "";
+    // }
+    
+    // if (data.next == null){
+    //     nextDisable = "disabled";
+    // }else {
+    //     nextDisable = "";
+    // }
+
+    // let html = "";
+    // html += `<li class="page-item ${prevDisable}"><a class="page-link" onclick="getData('${data.prev}')">Previous</a></li>`;
+    // html += `<li class="page-item ${nextDisabe}"><a class="page-link" onclick="getData('${data.next}')">Next</a></li>`;
+    // document.getElementById("paginacion").innerHTML =html;
+
+
+// <!---USANDO OPERACION TERNARIA--->
+    let html = "";
+    (data.prev == null) ? prevDisable = "disabled" : prevDisable = ""; 
+    html += `<li class="page-item ${prevDisable}"><a class="page-link" onclick="getData('${data.prev}')">Previous</a></li>`;
+    (data.next == null) ? nextDisable = "disabled" : nextDisable = "";
+    html += `<li class="page-item ${nextDisable}"><a class="page-link" onclick="getData('${data.next}')">Next</a></li>`;
+    document.getElementById("paginacion").innerHTML =html;
+
+}
+
 
 // Activo o invoco la funcion
 getData(API);

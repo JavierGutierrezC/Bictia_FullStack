@@ -77,17 +77,17 @@ blue.addEventListener('click', ()=>{
 })
 
 const temaEnStorage =()=>{
-    const temaGuardado = localStorage.getItem('tema')
+    const temaGuardado = localStorage.getItem('colorTema')
     if(temaGuardado == "dark"){
         container.classList.add("dark")
-    } else if (temaGuardado == "pepito"){  //PEPITOEN ESTE CASO ES SOLO UNA VARIABLE UN NOMBRE QUE SE LE DA COMO GUIA PARA SABER EN QUE ESTADO ESTA
+    } else if (temaGuardado == "pepito"){  
         container.className = " container"  //AQUI DARK SI ES UNA CLASE QUE SE AGREGA O BORRA DEL CONTAINER EN ESTE CASO
     } else if(temaGuardado == "pink"){
         container.classList.add("pink")
     } else if(temaGuardado == "blue"){
         container.classList.add("blue")
-}
+    }
 }
 
 
-temaGuardado()
+temaEnStorage()
